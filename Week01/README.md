@@ -1,2 +1,2 @@
-#学习笔记 Week01
-## first day
+# 学习笔记
+## Week01 - first day

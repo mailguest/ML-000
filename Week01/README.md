@@ -28,11 +28,11 @@
 [王然老师的第一周课github地址](https://github.com/mailguest/ml-training-camp/tree/main/chap01)
 
 1. 第一课：Python & R - Part1
-    * [第一课课堂笔记](chap01.md)
-    * [第一课后练习](chap01.ipynb)
-    * [第一课后预习 - C的自习](chap01-C复习.md)
-    * [第一课后预习 - C++的自习](chap01-C++复习.md)
+    * [第一课课堂笔记](chap01.md) 完成
+    * [第一课后练习](chap01.ipynb) 完成 
+    * [第一课后预习 - C的自习](chap01-C复习.md) 完成
+    * [第一课后预习 - C++的自习](chap01-C++复习.md) 完成
 2. 第二课：Python & R - Part2
-    * [第二课课堂笔记](chap02.md)
-    * [第二课后练习](chap02.ipynb)
-    * [第二课后问卷 - 相关知识点Mark](chap02-需要自己补充学习的知识点.md)
+    * [第二课课堂笔记](chap02.md) 完成
+    * [第二课后练习](chap02.ipynb) 完成
+    * [第二课后问卷 - 相关知识点Mark](chap02-需要自己补充学习的知识点.md) 待完成……

@@ -96,21 +96,23 @@ bagging_fraction相当于subsample样本采样，可以使bagging更快的运行
 分别调用sklearn中的这三类算法库，可以看到效果都超越了baseline
 
 #### base
-base_score: 0.91626
-fine_tuning_score: 0.91702
+
+ * base_score: 0.91626
+ * fine_tuning_score: 0.91702
 
 #### linear model
-SGD：0.8639
-LogisticRegression：0.91108
+
+ * SGD：0.8639
+ * LogisticRegression：0.91108
 
 #### ensemble
-RandomForest：0.9164
-GradientBoosting：0.91772 <GOOD>
-AdaBoost：0.91604
-Voting：0.91814 <GOOD>
+ * RandomForest：0.9164
+ * GradientBoosting：0.91772 <GOOD>
+ * AdaBoost：0.91604
+ * Voting：0.91814 <GOOD>
 
-lightgbm：0.91768 <GOOD>
-xgboost：0.91712 <GOOD>
+ * lightgbm：0.91768 <GOOD>
+ * xgboost：0.91712 <GOOD>
 
 ### 机器学习集成
 

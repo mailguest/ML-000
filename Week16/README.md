@@ -107,16 +107,18 @@ bagging_fraction相当于subsample样本采样，可以使bagging更快的运行
 
 #### ensemble
  * RandomForest：0.9164
- * GradientBoosting：0.91772 <GOOD>
+ * GradientBoosting：0.91772 GOOD
  * AdaBoost：0.91604
- * Voting：0.91814 <GOOD>
+ * Voting：0.91814 GOOD
 
- * lightgbm：0.91768 <GOOD>
- * xgboost：0.91712 <GOOD>
+ * lightgbm：0.91768 GOOD
+ * xgboost：0.91712 GOOD
+
 
 ### 机器学习集成
 
 我们采用两种集成方法
+
 
 #### Stacking
 
@@ -128,11 +130,12 @@ bagging_fraction相当于subsample样本采样，可以使bagging更快的运行
 
 由于要进行多次训练，因此这种方法要求训练数据很多，为了防止发生划分训练集和测试集后，测试集比例过小，生成的次级学习器泛化性能不强的问题，通常在Stacking算法中会使用交叉验证法或留一法来进行训练。
 
-<red>效果待处理验证……</red>
+<b>效果待处理验证……</b>
+
 
 #### 投票融合法
 
-<red>效果待处理验证……</red>
+<b>效果待处理验证……</b>
 
 
 ### 深度学习
@@ -144,10 +147,13 @@ bagging_fraction相当于subsample样本采样，可以使bagging更快的运行
 
 根据自己选择的深度学习网络，实现至少一中训练的 trick
 
+
 #### 加速方法
+
 ##### 优化器
 
 SGD （+Momentum）或Adam
+
 
 ##### 学习率调整
 
@@ -155,23 +161,33 @@ SGD （+Momentum）或Adam
   * 增加复杂上层网络时候要注意对于已经训练好的权重和随机初始化的权重采用不同的学习率
   * 后者实现注意 train 和 eval 的正确选择
 
+
 ##### 不同的训练阶段
+
 一般来说，当模型快进入到收敛的阶段时候，需要减少模型的变化程度（进行微调）
 
 其他目的，减少算力消耗 加大 Batch Size 选用更慢的优化器（SGD+Momentum/Lookahead+SGD+Momentum)
 
+
 ##### 损失函数
+
 在一些情况下，自然的损失函数未必是最有效的 在一些时候，过早的引入损失函数只会使得训练更加困难
 
+
 ##### Ensemble集成
+
 不同的初始化 Ensemble 效果更好； 一些文章表明增加惩罚使得不同网络的权重不同更好。
 
+
 ##### 数据扩充
+
 两种数据扩充方式：增加合理的样本；增加噪声
 
 不宜过多；过多会实际导致模型记住观测 不同数据扩充方法可以进行 ensemble
 
+
 ##### Encoder 拼接
+
 一般应用与 CV 和 NLP 数据当中
 
 将不同 encoder 进行（两两）拼接并训练
@@ -180,28 +196,33 @@ SGD （+Momentum）或Adam
 
 一般来说 encoder 架构/训练方式越不同，带来的增益越大
 
+
 #### 深度学习网络+Adam
 
 因为Colab本身内置Tensorflow与keras，所以使用keras搭建神经网络
 
-<red>效果待处理验证……</red>
+<b>效果待处理验证……</b>
+
 
 #### 残差网络
 在上一版基础上加入残差网络
 
-<red>效果待处理验证……</red>
+<b>效果待处理验证……</b>
+
 
 #### 使用TabNet
 
 使用TbaNet测试
 
-<red>效果待处理验证……</red>
+<b>效果待处理验证……</b>
+
 
 #### 深度网络集成
 
 将神经网络加入到k近邻+lightGBM+逻辑回归集成
 
-<red>效果待处理验证……</red>
+<b>效果待处理验证……</b>
+
 
 ## 学习总结
 

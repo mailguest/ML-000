@@ -8,16 +8,19 @@
 
 ![image](https://user-images.githubusercontent.com/1567844/118799131-f8b12780-b8d0-11eb-8f32-ad8f7f7e02e2.png)
 
+
 ## 机器学习
 ### 要求：
 
 根据三种衍生变量构建的方法每个至少构建出一个衍生变量，并检验其结果。实现非深度学习至少三个模型并进行集成。
+
 
 ### 思路
 
 我们采用lightGBM算法，用5KFold方法划分数据训练不同模型，根据投票来确定最后结果。
 
 采用调节LightGBM参数的方法、构建衍生变量的方法、使用其他算法API以及集成的思路来提升效果。
+
 
 ### LightGBM调参
 #### num_leaves: 128 -> 168
@@ -85,13 +88,29 @@ bagging_fraction相当于subsample样本采样，可以使bagging更快的运行
 
 构建两个新的变量进行训练得到如下截图的提升：
 
-image-20210428211630468
+![image](https://user-images.githubusercontent.com/1567844/118816399-b85ba480-b8e4-11eb-822c-dd139facbf1d.png)
+
 
 ### 调用其他算法API
 
 分别调用sklearn中的这三类算法库，可以看到效果都超越了baseline
 
-image-20210502103358398
+#### base
+base_score: 0.91626
+fine_tuning_score: 0.91702
+
+#### linear model
+SGD：0.8639
+LogisticRegression：0.91108
+
+#### ensemble
+RandomForest：0.9164
+GradientBoosting：0.91772 <GOOD>
+AdaBoost：0.91604
+Voting：0.91814 <GOOD>
+
+lightgbm：0.91768 <GOOD>
+xgboost：0.91712 <GOOD>
 
 ### 机器学习集成
 
